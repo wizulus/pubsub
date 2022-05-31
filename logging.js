@@ -1,6 +1,7 @@
-import Log4js from 'log4js'
+const Log4js = require('log4js')
 
-export const logLevels = ['all', 'trace', 'debug', 'info', 'warn', 'error', 'fatal', 'mark', 'off']
+const logLevels = ['all', 'trace', 'debug', 'info', 'warn', 'error', 'fatal', 'mark', 'off']
+exports.logLevels = logLevels
 /** @typedef {'all'|'trace'|'debug'|'info'|'warn'|'error'|'fatal'|'mark'|'off'} LogLevel */
 
 let logLevel = process.env.LOG_LEVEL || 'info'
@@ -23,6 +24,8 @@ const log4js = Log4js.configure({
   }
 })
 
-export function getLogger (name) {
+function getLogger (name) {
   return log4js.getLogger(name)
 }
+
+exports.getLogger = getLogger

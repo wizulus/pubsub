@@ -1,5 +1,5 @@
-import RedisMock from './redis-mock.js'
-import { getLogger } from './logging.js'
+const RedisMock = require('./redis-mock.js')
+const { getLogger } = require('./logging.js')
 
 const logger = getLogger('pubsub-server')
 let mock = null
@@ -26,7 +26,7 @@ function subscribe(channel, callback) {
 }
 
 
-export default function(ws, req) {
+module.exports = function(ws, req) {
   if (!mock) {
     mock = new RedisMock()
   }

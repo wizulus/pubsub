@@ -1,6 +1,6 @@
 /* eslint-disable space-before-function-paren */
 /* eslint-disable indent */
-export default class Client {
+class Client {
   constructor(url, options = { reconnect: true, delay: 1000 }) {
     this.url = url
     this.options = options
@@ -129,3 +129,5 @@ export default class Client {
     }
   }
 }
+
+module.exports = Client

@@ -1,6 +1,6 @@
-import EventEmitter from 'events'
-import micromatch from 'micromatch'
-import { getLogger } from './logging.js'
+const EventEmitter = require('events')
+const micromatch = require('micromatch')
+const { getLogger } = require('./logging.js')
 
 const logger = getLogger('redis-mock')
 
@@ -14,7 +14,7 @@ const sleep = (ms = 5) => new Promise(resolve => setTimeout(resolve, ms))
  * @class
  * @augments import('redis').RedisClient
  */
-export default class RedisMock extends EventEmitter {
+class RedisMock extends EventEmitter {
   constructor () {
     super()
     logger.trace('New RedisMock')
@@ -141,3 +141,5 @@ export default class RedisMock extends EventEmitter {
     }
   }
 }
+
+module.exports = RedisMock

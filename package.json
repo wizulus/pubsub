@@ -1,6 +1,6 @@
 {
   "name": "@wizulus/pubsub",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
@@ -9,7 +9,6 @@
     "./server": "./server.js"
   },
   "license": "MIT",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/wizulus/pubsub.git"

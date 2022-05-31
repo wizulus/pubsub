@@ -1,6 +1,6 @@
-import express from 'express'
-import expressWs from 'express-ws'
-import server from './server.js'
+const express = require('express')
+const expressWs = require('express-ws')
+const server = require('./server.js')
 
 const app = express()
 expressWs(app)

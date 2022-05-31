@@ -1,2 +1,2 @@
-export { default as server } from './server.js'
-export { default as Client } from './client.js'
+exports.server = require('./server.js')
+exports.Client = require('./client.js')

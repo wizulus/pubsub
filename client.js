@@ -1,6 +1,6 @@
-import WebSocket from 'ws'
+const WebSocket = require('ws')
 
-export default class Client {
+class Client {
   constructor (url, options = {reconnect: true, delay: 1000}) {
     this.url = url
     this.options = options
@@ -125,3 +125,5 @@ export default class Client {
   }
 
 }
+
+module.exports = Client
