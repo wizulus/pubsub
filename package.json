@@ -1,7 +1,13 @@
 {
   "name": "@wizulus/pubsub",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./browser": "./browser.js",
+    "./client": "./client.js",
+    "./server": "./server.js"
+  },
   "license": "MIT",
   "type": "module",
   "repository": {
